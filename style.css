@@ -1,15 +1,63 @@
-/* Header background gradient */
-.bg-primary {
-    background: linear-gradient(to right, #4facfe, #00f2fe);
+/* Global */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
 }
 
-/* Add hover effect for course cards */
-.card:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
+/* Header */
+.bg-dark-gradient {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
 }
 
-/* Center text in footer */
+.bg-light-gradient {
+    background: linear-gradient(135deg, #ffffff, #e8f3fc);
+}
+
+/* Floating Design */
+.floating-card {
+    border: none;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.floating-container {
+    position: relative;
+    z-index: 2;
+}
+
+.floating-container::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    background: rgba(0, 0, 0, 0.03);
+    z-index: -1;
+    border-radius: 20px;
+}
+
+/* Buttons */
+.btn-outline-light {
+    border: 2px solid #fff;
+    font-weight: bold;
+}
+
+.btn-outline-light:hover {
+    background-color: #fff;
+    color: #0f2027;
+}
+
+/* Footer */
 footer {
     font-size: 0.9rem;
+    letter-spacing: 0.5px;
 }
