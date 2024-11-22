@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shree Classes</title>
+    <script src="https://cdn.jsdelivr.net/npm/vss@1.0.1/dist/vss.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -48,10 +49,10 @@
 
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
+        <form id="enquiry-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
             <button type="submit" class="btn">Send Message</button>
         </form>
     </section>
