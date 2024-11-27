@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shree Classes</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.12.0/cdn.min.js" defer></script>
   <style>
     @keyframes fadeIn {
       from {
@@ -19,20 +20,38 @@
     .fade-in {
       animation: fadeIn 1s ease-in-out;
     }
+    .frosted {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+    }
   </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-200">
 
-  <!-- Semi-Transparent Header -->
+  <!-- Header -->
   <header class="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-md z-50 shadow-md">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold text-blue-600">Shree Classes</h1>
-      <nav class="space-x-6 text-gray-800 font-medium">
+      <nav class="hidden md:flex space-x-6 text-gray-800 font-medium">
         <a href="#about" class="hover:text-blue-600 transition">About</a>
         <a href="#gallery" class="hover:text-blue-600 transition">Gallery</a>
         <a href="#achievements" class="hover:text-blue-600 transition">Achievements</a>
         <a href="#enquiry" class="hover:text-blue-600 transition">Enquiry</a>
       </nav>
+      <!-- Hamburger Menu -->
+      <div x-data="{ open: false }" class="md:hidden">
+        <button @click="open = !open" class="focus:outline-none">
+          <span class="block w-8 h-1 bg-gray-800 mb-1"></span>
+          <span class="block w-8 h-1 bg-gray-800 mb-1"></span>
+          <span class="block w-8 h-1 bg-gray-800"></span>
+        </button>
+        <div x-show="open" x-transition class="absolute top-16 left-0 w-full bg-white shadow-lg py-4">
+          <a href="#about" class="block px-6 py-2 text-gray-800 hover:bg-blue-100">About</a>
+          <a href="#gallery" class="block px-6 py-2 text-gray-800 hover:bg-blue-100">Gallery</a>
+          <a href="#achievements" class="block px-6 py-2 text-gray-800 hover:bg-blue-100">Achievements</a>
+          <a href="#enquiry" class="block px-6 py-2 text-gray-800 hover:bg-blue-100">Enquiry</a>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -50,7 +69,7 @@
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-12 bg-white fade-in">
+  <section id="about" class="py-12 frosted fade-in">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-6">About Shree Classes</h2>
       <p class="text-gray-700 text-lg text-center leading-relaxed">
@@ -60,23 +79,26 @@
     </div>
   </section>
 
-  <!-- Photo Gallery Section -->
+  <!-- Photo Gallery Slider -->
   <section id="gallery" class="py-12 bg-gray-100 fade-in">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-6">Photo Gallery</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <img src="https://via.placeholder.com/300" alt="Classroom" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
-        <img src="https://via.placeholder.com/300" alt="Students" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
-        <img src="https://via.placeholder.com/300" alt="Awards" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
-        <img src="https://via.placeholder.com/300" alt="Faculty" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
-        <img src="https://via.placeholder.com/300" alt="Events" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
-        <img src="https://via.placeholder.com/300" alt="Campus" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
+      <div class="relative overflow-hidden max-w-4xl mx-auto">
+        <div x-data="{ slide: 0 }" class="relative">
+          <div class="flex transition-transform duration-500" :style="{ transform: `translateX(-${slide * 100}%)` }">
+            <img src="https://via.placeholder.com/800x400" alt="Classroom" class="w-full rounded-lg">
+            <img src="https://via.placeholder.com/800x400" alt="Students" class="w-full rounded-lg">
+            <img src="https://via.placeholder.com/800x400" alt="Awards" class="w-full rounded-lg">
+          </div>
+          <button @click="slide = (slide === 0 ? 2 : slide - 1)" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700">&lt;</button>
+          <button @click="slide = (slide === 2 ? 0 : slide + 1)" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700">&gt;</button>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Achievements Section -->
-  <section id="achievements" class="py-12 bg-white fade-in">
+  <section id="achievements" class="py-12 frosted fade-in">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-6">Our Achievements</h2>
       <div class="text-gray-700 text-lg space-y-4 leading-relaxed">
@@ -94,7 +116,7 @@
   </section>
 
   <!-- Enquiry Section -->
-  <section id="enquiry" class="py-12 bg-gray-100 fade-in">
+  <section id="enquiry" class="py-12 frosted fade-in">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-6">Enquire Now</h2>
       <form action="#" method="POST" class="bg-white p-8 rounded-lg shadow-md max-w-lg mx-auto">
@@ -120,9 +142,4 @@
   <!-- Footer -->
   <footer class="bg-blue-600 text-white py-4">
     <div class="container mx-auto text-center">
-      <p>© 2024 Shree Classes. All Rights Reserved.</p>
-    </div>
-  </footer>
-
-</body>
-</html>
+      <p>© 2024 Shree Classes. All
