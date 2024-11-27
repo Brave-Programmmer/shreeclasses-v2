@@ -5,59 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shree Classes</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+  </style>
 </head>
 <body class="bg-gray-50">
 
-  <!-- Header -->
-  <header class="bg-blue-600 text-white py-4">
-    <div class="container mx-auto text-center">
-      <h1 class="text-4xl font-bold">Shree Classes</h1>
-      <p class="text-lg mt-2">Excellence in Education</p>
+  <!-- Jumbotron -->
+  <header class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-16">
+    <div class="container mx-auto px-4 text-center fade-in">
+      <h1 class="text-5xl font-extrabold mb-4">Welcome to Shree Classes</h1>
+      <p class="text-lg font-medium mb-6">
+        Empowering students with quality education and innovative learning.
+      </p>
+      <a href="#about" class="bg-white text-blue-600 font-bold px-6 py-3 rounded-lg shadow-lg hover:bg-gray-200 transition">
+        Learn More
+      </a>
     </div>
   </header>
 
   <!-- About Section -->
-  <section class="py-8 bg-white">
+  <section id="about" class="py-12 bg-white fade-in">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-6">About Shree Classes</h2>
-      <p class="text-gray-700 text-lg text-center">
-        Shree Classes is dedicated to providing top-notch educational coaching for students. Our expert faculty, personalized teaching methods, and excellent results make us a trusted name in education.
+      <h2 class="text-4xl font-bold text-center mb-6">About Shree Classes</h2>
+      <p class="text-gray-700 text-lg text-center leading-relaxed">
+        Shree Classes is a renowned coaching institute dedicated to academic excellence and personalized teaching. 
+        With expert faculty and state-of-the-art resources, we help students achieve their academic goals and more.
       </p>
     </div>
   </section>
 
   <!-- Photo Gallery Section -->
-  <section class="py-8 bg-gray-100">
+  <section class="py-12 bg-gray-100 fade-in">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-6">Photo Gallery</h2>
+      <h2 class="text-4xl font-bold text-center mb-6">Photo Gallery</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <img src="https://via.placeholder.com/300" alt="Classroom" class="rounded shadow">
-        <img src="https://via.placeholder.com/300" alt="Students" class="rounded shadow">
-        <img src="https://via.placeholder.com/300" alt="Awards" class="rounded shadow">
-        <img src="https://via.placeholder.com/300" alt="Faculty" class="rounded shadow">
-        <img src="https://via.placeholder.com/300" alt="Events" class="rounded shadow">
-        <img src="https://via.placeholder.com/300" alt="Campus" class="rounded shadow">
+        <img src="https://via.placeholder.com/300" alt="Classroom" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
+        <img src="https://via.placeholder.com/300" alt="Students" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
+        <img src="https://via.placeholder.com/300" alt="Awards" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
+        <img src="https://via.placeholder.com/300" alt="Faculty" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
+        <img src="https://via.placeholder.com/300" alt="Events" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
+        <img src="https://via.placeholder.com/300" alt="Campus" class="rounded-lg shadow hover:scale-105 transition-transform duration-300">
       </div>
     </div>
   </section>
 
   <!-- Achievements Section -->
-  <section class="py-8 bg-white">
+  <section class="py-12 bg-white fade-in">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-6">Our Achievements</h2>
-      <ul class="text-gray-700 text-lg list-disc list-inside">
-        <li>90% of our students score above 85% in board exams.</li>
-        <li>Numerous students have secured top ranks in competitive exams.</li>
-        <li>Awarded "Best Coaching Center" for three consecutive years.</li>
-      </ul>
+      <h2 class="text-4xl font-bold text-center mb-6">Our Achievements</h2>
+      <div class="text-gray-700 text-lg space-y-4 leading-relaxed">
+        <p class="flex items-center gap-2">
+          <span class="text-green-500 font-bold text-2xl">✔</span> 90% of students score above 85% in board exams.
+        </p>
+        <p class="flex items-center gap-2">
+          <span class="text-green-500 font-bold text-2xl">✔</span> Top ranks in competitive exams achieved by our students.
+        </p>
+        <p class="flex items-center gap-2">
+          <span class="text-green-500 font-bold text-2xl">✔</span> Recognized as the "Best Coaching Center" for three consecutive years.
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- Enquiry Section -->
-  <section class="py-8 bg-gray-100">
+  <section class="py-12 bg-gray-100 fade-in">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-6">Enquire Now</h2>
-      <form action="#" method="POST" class="bg-white p-6 rounded shadow-md max-w-lg mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-6">Enquire Now</h2>
+      <form action="#" method="POST" class="bg-white p-8 rounded-lg shadow-md max-w-lg mx-auto">
         <div class="mb-4">
           <label for="name" class="block text-gray-700 font-bold mb-2">Name:</label>
           <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600">
@@ -70,7 +97,9 @@
           <label for="message" class="block text-gray-700 font-bold mb-2">Message:</label>
           <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
         </div>
-        <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md font-bold hover:bg-blue-700 transition">Submit</button>
+        <button type="submit" class="w-full bg-blue-600 text-white py-3 px-4 rounded-md font-bold hover:bg-blue-700 transition">
+          Submit
+        </button>
       </form>
     </div>
   </section>
