@@ -21,50 +21,50 @@
       animation: fadeIn 1s ease-in-out;
     }
     .frosted {
-      background: rgba(255, 255, 255, 0.6);
+      background: rgba(236, 177, 118, 0.8); /* #ECB176 with transparency */
       backdrop-filter: blur(10px);
       border-radius: 12px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
-<body class="bg-gray-200">
+<body class="bg-[#ECB176] text-[#6F4E37]">
 
   <!-- Header -->
-  <header class="fixed top-0 left-0 w-full bg-white/50 frosted shadow-md z-50">
+  <header class="fixed top-0 left-0 w-full bg-[#ECB176]/70 frosted shadow-md z-50">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-gray-800">Shree Classes</h1>
-      <nav class="hidden md:flex space-x-6 text-gray-800 font-medium">
-        <a href="#about" class="hover:text-gray-600 transition">About</a>
-        <a href="#gallery" class="hover:text-gray-600 transition">Gallery</a>
-        <a href="#achievements" class="hover:text-gray-600 transition">Achievements</a>
-        <a href="#enquiry" class="hover:text-gray-600 transition">Enquiry</a>
+      <h1 class="text-2xl font-bold text-[#6F4E37]">Shree Classes</h1>
+      <nav class="hidden md:flex space-x-6 text-[#6F4E37] font-medium">
+        <a href="#about" class="hover:text-[#A67B5B] transition">About</a>
+        <a href="#gallery" class="hover:text-[#A67B5B] transition">Gallery</a>
+        <a href="#achievements" class="hover:text-[#A67B5B] transition">Achievements</a>
+        <a href="#enquiry" class="hover:text-[#A67B5B] transition">Enquiry</a>
       </nav>
       <!-- Hamburger Menu -->
       <div x-data="{ open: false }" class="md:hidden">
         <button @click="open = !open" class="focus:outline-none">
-          <span class="block w-8 h-1 bg-gray-800 mb-1"></span>
-          <span class="block w-8 h-1 bg-gray-800 mb-1"></span>
-          <span class="block w-8 h-1 bg-gray-800"></span>
+          <span class="block w-8 h-1 bg-[#6F4E37] mb-1"></span>
+          <span class="block w-8 h-1 bg-[#6F4E37] mb-1"></span>
+          <span class="block w-8 h-1 bg-[#6F4E37]"></span>
         </button>
-        <div x-show="open" x-transition class="absolute top-16 left-0 w-full bg-white shadow-lg py-4 frosted">
-          <a href="#about" class="block px-6 py-2 text-gray-800 hover:bg-gray-100">About</a>
-          <a href="#gallery" class="block px-6 py-2 text-gray-800 hover:bg-gray-100">Gallery</a>
-          <a href="#achievements" class="block px-6 py-2 text-gray-800 hover:bg-gray-100">Achievements</a>
-          <a href="#enquiry" class="block px-6 py-2 text-gray-800 hover:bg-gray-100">Enquiry</a>
+        <div x-show="open" x-transition class="absolute top-16 left-0 w-full bg-[#ECB176]/90 shadow-lg py-4 frosted">
+          <a href="#about" class="block px-6 py-2 text-[#6F4E37] hover:bg-[#A67B5B]/20">About</a>
+          <a href="#gallery" class="block px-6 py-2 text-[#6F4E37] hover:bg-[#A67B5B]/20">Gallery</a>
+          <a href="#achievements" class="block px-6 py-2 text-[#6F4E37] hover:bg-[#A67B5B]/20">Achievements</a>
+          <a href="#enquiry" class="block px-6 py-2 text-[#6F4E37] hover:bg-[#A67B5B]/20">Enquiry</a>
         </div>
       </div>
     </div>
   </header>
 
   <!-- Jumbotron -->
-  <section class="h-screen flex items-center justify-center frosted mx-4 my-16">
-    <div class="text-center px-6 py-8 fade-in">
-      <h1 class="text-5xl font-extrabold text-gray-800 mb-6">Welcome to Shree Classes</h1>
-      <p class="text-lg text-gray-600 font-medium mb-6">
+  <section class="h-screen flex items-center justify-center frosted mx-4 my-16 text-center px-6 py-8 fade-in">
+    <div>
+      <h1 class="text-5xl font-extrabold text-[#6F4E37] mb-6">Welcome to Shree Classes</h1>
+      <p class="text-lg text-[#A67B5B] font-medium mb-6">
         Empowering students with quality education and innovative learning.
       </p>
-      <a href="#about" class="bg-gray-800 text-white font-bold px-6 py-3 rounded-lg shadow-lg hover:bg-gray-600 transition">
+      <a href="#about" class="bg-[#6F4E37] text-white font-bold px-6 py-3 rounded-lg shadow-lg hover:bg-[#A67B5B] transition">
         Learn More
       </a>
     </div>
@@ -73,8 +73,8 @@
   <!-- About Section -->
   <section id="about" class="py-12 frosted mx-4 my-6 fade-in">
     <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center text-gray-800 mb-6">About Shree Classes</h2>
-      <p class="text-gray-600 text-lg text-center leading-relaxed">
+      <h2 class="text-4xl font-bold text-center text-[#6F4E37] mb-6">About Shree Classes</h2>
+      <p class="text-[#6F4E37] text-lg text-center leading-relaxed">
         Shree Classes is a renowned coaching institute dedicated to academic excellence and personalized teaching. 
         With expert faculty and state-of-the-art resources, we help students achieve their academic goals and more.
       </p>
@@ -84,7 +84,7 @@
   <!-- Photo Gallery Slider -->
   <section id="gallery" class="py-12 frosted mx-4 my-6 fade-in">
     <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center text-gray-800 mb-6">Photo Gallery</h2>
+      <h2 class="text-4xl font-bold text-center text-[#6F4E37] mb-6">Photo Gallery</h2>
       <div class="relative overflow-hidden max-w-4xl mx-auto">
         <div x-data="{ slide: 0 }" class="relative">
           <div class="flex transition-transform duration-500" :style="{ transform: `translateX(-${slide * 100}%)` }">
@@ -92,8 +92,8 @@
             <img src="https://via.placeholder.com/800x400" alt="Students" class="w-full rounded-lg">
             <img src="https://via.placeholder.com/800x400" alt="Awards" class="w-full rounded-lg">
           </div>
-          <button @click="slide = (slide === 0 ? 2 : slide - 1)" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-700">&lt;</button>
-          <button @click="slide = (slide === 2 ? 0 : slide + 1)" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-700">&gt;</button>
+          <button @click="slide = (slide === 0 ? 2 : slide - 1)" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-[#6F4E37] text-white px-4 py-2 rounded-full hover:bg-[#A67B5B]">&lt;</button>
+          <button @click="slide = (slide === 2 ? 0 : slide + 1)" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-[#6F4E37] text-white px-4 py-2 rounded-full hover:bg-[#A67B5B]">&gt;</button>
         </div>
       </div>
     </div>
@@ -102,8 +102,8 @@
   <!-- Achievements Section -->
   <section id="achievements" class="py-12 frosted mx-4 my-6 fade-in">
     <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center text-gray-800 mb-6">Our Achievements</h2>
-      <ul class="text-gray-600 text-lg space-y-4 leading-relaxed list-disc list-inside">
+      <h2 class="text-4xl font-bold text-center text-[#6F4E37] mb-6">Our Achievements</h2>
+      <ul class="text-[#6F4E37] text-lg space-y-4 leading-relaxed list-disc list-inside">
         <li>90% of students score above 85% in board exams.</li>
         <li>Top ranks in competitive exams achieved by our students.</li>
         <li>Recognized as the "Best Coaching Center" for three consecutive years.</li>
@@ -114,21 +114,21 @@
   <!-- Enquiry Section -->
   <section id="enquiry" class="py-12 frosted mx-4 my-6 fade-in">
     <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center text-gray-800 mb-6">Enquire Now</h2>
+      <h2 class="text-4xl font-bold text-center text-[#6F4E37] mb-6">Enquire Now</h2>
       <form action="#" method="POST" class="p-8 rounded-lg shadow-md max-w-lg mx-auto">
         <div class="mb-4">
-          <label for="name" class="block text-gray-800 font-bold mb-2">Name:</label>
-          <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600">
+          <label for="name" class="block text-[#6F4E37] font-bold mb-2">Name:</label>
+          <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#A67B5B]">
         </div>
         <div class="mb-4">
-          <label for="email" class="block text-gray-800 font-bold mb-2">Email:</label>
-          <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600">
+          <label for="email" class="block text-[#6F4E37] font-bold mb-2">Email:</label>
+          <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#A67B5B]">
         </div>
         <div class="mb-4">
-          <label for="message" class="block text-gray-800 font-bold mb-2">Message:</label>
-          <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600"></textarea>
+          <label for="message" class="block text-[#6F4E37] font-bold mb-2">Message:</label>
+          <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#A67B5B]"></textarea>
         </div>
-        <button type="submit" class="w-full bg-gray-800 text-white py-3 px-4 rounded-md font-bold hover:bg-gray-700 transition">
+        <button type="submit" class="w-full bg-[#6F4E37] text-white py-3 px-4 rounded-md font-bold hover:bg-[#A67B5B] transition">
           Submit
         </button>
       </form>
@@ -136,8 +136,8 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-white/50 frosted py-4">
-    <div class="container mx-auto text-center text-gray-600">
+  <footer class="bg-[#ECB176]/70 frosted py-4">
+    <div class="container mx-auto text-center text-[#6F4E37]">
       <p>© 2024 Shree Classes. All Rights Reserved.</p>
     </div>
   </footer>
