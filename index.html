@@ -23,8 +23,21 @@
 </head>
 <body class="bg-gray-50">
 
+  <!-- Semi-Transparent Header -->
+  <header class="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-md z-50 shadow-md">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-600">Shree Classes</h1>
+      <nav class="space-x-6 text-gray-800 font-medium">
+        <a href="#about" class="hover:text-blue-600 transition">About</a>
+        <a href="#gallery" class="hover:text-blue-600 transition">Gallery</a>
+        <a href="#achievements" class="hover:text-blue-600 transition">Achievements</a>
+        <a href="#enquiry" class="hover:text-blue-600 transition">Enquiry</a>
+      </nav>
+    </div>
+  </header>
+
   <!-- Jumbotron -->
-  <header class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-16">
+  <section class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-24 mt-16">
     <div class="container mx-auto px-4 text-center fade-in">
       <h1 class="text-5xl font-extrabold mb-4">Welcome to Shree Classes</h1>
       <p class="text-lg font-medium mb-6">
@@ -34,7 +47,7 @@
         Learn More
       </a>
     </div>
-  </header>
+  </section>
 
   <!-- About Section -->
   <section id="about" class="py-12 bg-white fade-in">
@@ -48,7 +61,7 @@
   </section>
 
   <!-- Photo Gallery Section -->
-  <section class="py-12 bg-gray-100 fade-in">
+  <section id="gallery" class="py-12 bg-gray-100 fade-in">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-6">Photo Gallery</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -63,7 +76,7 @@
   </section>
 
   <!-- Achievements Section -->
-  <section class="py-12 bg-white fade-in">
+  <section id="achievements" class="py-12 bg-white fade-in">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-6">Our Achievements</h2>
       <div class="text-gray-700 text-lg space-y-4 leading-relaxed">
@@ -81,7 +94,7 @@
   </section>
 
   <!-- Enquiry Section -->
-  <section class="py-12 bg-gray-100 fade-in">
+  <section id="enquiry" class="py-12 bg-gray-100 fade-in">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-6">Enquire Now</h2>
       <form action="#" method="POST" class="bg-white p-8 rounded-lg shadow-md max-w-lg mx-auto">
